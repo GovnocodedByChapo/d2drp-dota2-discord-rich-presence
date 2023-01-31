@@ -1,5 +1,7 @@
 {
-  "last":"0.1",
-  "changelog":"",
-  "url":""
+    "last": "0.1",
+    "changelog": {
+        "0.1": ["release"]
+    },
+    "url": ""
 }
