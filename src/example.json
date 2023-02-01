@@ -1,0 +1,345 @@
+{
+    "buildings": {
+        "radiant": {
+            "dota_goodguys_tower1_top": {
+                "health": 1800,
+                "max_health": 1800
+            },
+            "dota_goodguys_tower2_top": {
+                "health": 2500,
+                "max_health": 2500
+            },
+            "dota_goodguys_tower3_top": {
+                "health": 2500,
+                "max_health": 2500
+            },
+            "dota_goodguys_tower1_mid": {
+                "health": 1742,
+                "max_health": 1800
+            },
+            "dota_goodguys_tower2_mid": {
+                "health": 2500,
+                "max_health": 2500
+            },
+            "dota_goodguys_tower3_mid": {
+                "health": 2500,
+                "max_health": 2500
+            },
+            "dota_goodguys_tower1_bot": {
+                "health": 1628,
+                "max_health": 1800
+            },
+            "dota_goodguys_tower2_bot": {
+                "health": 2500,
+                "max_health": 2500
+            },
+            "dota_goodguys_tower3_bot": {
+                "health": 2500,
+                "max_health": 2500
+            },
+            "dota_goodguys_tower4_top": {
+                "health": 2600,
+                "max_health": 2600
+            },
+            "dota_goodguys_tower4_bot": {
+                "health": 2600,
+                "max_health": 2600
+            },
+            "good_rax_melee_top": {
+                "health": 2200,
+                "max_health": 2200
+            },
+            "good_rax_range_top": {
+                "health": 1300,
+                "max_health": 1300
+            },
+            "good_rax_melee_mid": {
+                "health": 2200,
+                "max_health": 2200
+            },
+            "good_rax_range_mid": {
+                "health": 1300,
+                "max_health": 1300
+            },
+            "good_rax_melee_bot": {
+                "health": 2200,
+                "max_health": 2200
+            },
+            "good_rax_range_bot": {
+                "health": 1300,
+                "max_health": 1300
+            },
+            "dota_goodguys_fort": {
+                "health": 4500,
+                "max_health": 4500
+            }
+        }
+    },
+    "provider": {
+        "name": "Dota 2",
+        "appid": 570,
+        "version": 47,
+        "timestamp": 1675191519
+    },
+    "map": {
+        "name": "start",
+        "matchid": "6996035143",
+        "game_time": 720,
+        "clock_time": 597,
+        "daytime": false,
+        "nightstalker_night": false,
+        "radiant_score": 5,
+        "dire_score": 3,
+        "game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+        "paused": false,
+        "win_team": "none",
+        "customgamename": "",
+        "ward_purchase_cooldown": 0
+    },
+    "player": {
+        "steamid": "76561198262441063",
+        "accountid": "302175335",
+        "name": "moujeek",
+        "activity": "playing",
+        "kills": 2,
+        "deaths": 0,
+        "assists": 0,
+        "last_hits": 1,
+        "denies": 0,
+        "kill_streak": 2,
+        "commands_issued": 590,
+        "kill_list": {
+            "victimid_6": 1,
+            "victimid_7": 1
+        },
+        "team_name": "radiant",
+        "gold": 1228,
+        "gold_reliable": 824,
+        "gold_unreliable": 404,
+        "gold_from_hero_kills": 353,
+        "gold_from_creep_kills": 51,
+        "gold_from_income": 896,
+        "gold_from_shared": 47,
+        "gpm": 2165,
+        "xpm": 72
+    },
+    "hero": {
+        "xpos": 4394,
+        "ypos": -2448,
+        "id": 114,
+        "name": "npc_dota_hero_monkey_king",
+        "level": 3,
+        "xp": 721,
+        "alive": true,
+        "respawn_seconds": 0,
+        "buyback_cost": 1903,
+        "buyback_cooldown": 0,
+        "health": 618,
+        "max_health": 1180,
+        "health_percent": 52,
+        "mana": 363,
+        "max_mana": 363,
+        "mana_percent": 100,
+        "silenced": false,
+        "stunned": false,
+        "disarmed": false,
+        "magicimmune": false,
+        "hexed": false,
+        "muted": false,
+        "break": false,
+        "aghanims_scepter": false,
+        "aghanims_shard": false,
+        "smoked": false,
+        "has_debuff": false,
+        "talent_1": false,
+        "talent_2": false,
+        "talent_3": false,
+        "talent_4": false,
+        "talent_5": false,
+        "talent_6": false,
+        "talent_7": false,
+        "talent_8": false,
+        "attributes_level": 0
+    },
+    "abilities": {
+        "ability0": {
+            "name": "monkey_king_boundless_strike",
+            "level": 1,
+            "can_cast": true,
+            "passive": false,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": false
+        },
+        "ability1": {
+            "name": "monkey_king_tree_dance",
+            "level": 1,
+            "can_cast": true,
+            "passive": false,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": false
+        },
+        "ability2": {
+            "name": "monkey_king_primal_spring",
+            "level": 1,
+            "can_cast": false,
+            "passive": false,
+            "ability_active": false,
+            "cooldown": 0,
+            "ultimate": false
+        },
+        "ability3": {
+            "name": "monkey_king_jingu_mastery",
+            "level": 0,
+            "can_cast": false,
+            "passive": true,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": false
+        },
+        "ability4": {
+            "name": "monkey_king_mischief",
+            "level": 1,
+            "can_cast": true,
+            "passive": false,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": false
+        },
+        "ability5": {
+            "name": "monkey_king_wukongs_command",
+            "level": 0,
+            "can_cast": false,
+            "passive": false,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": true
+        },
+        "ability6": {
+            "name": "plus_high_five",
+            "level": 1,
+            "can_cast": true,
+            "passive": false,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": false
+        },
+        "ability7": {
+            "name": "plus_guild_banner",
+            "level": 1,
+            "can_cast": true,
+            "passive": false,
+            "ability_active": true,
+            "cooldown": 0,
+            "ultimate": false
+        }
+    },
+    "items": {
+        "slot0": {
+            "name": "item_monkey_king_bar",
+            "purchaser": 0,
+            "passive": true
+        },
+        "slot1": {
+            "name": "item_silver_edge",
+            "purchaser": 0,
+            "can_cast": true,
+            "cooldown": 0,
+            "passive": false
+        },
+        "slot2": {
+            "name": "item_greater_crit",
+            "purchaser": 0,
+            "passive": true
+        },
+        "slot3": {
+            "name": "item_branches",
+            "purchaser": 0,
+            "can_cast": true,
+            "cooldown": 0,
+            "passive": false
+        },
+        "slot4": {
+            "name": "item_slippers",
+            "purchaser": 0,
+            "passive": true
+        },
+        "slot5": {
+            "name": "item_satanic",
+            "purchaser": 0,
+            "can_cast": true,
+            "cooldown": 0,
+            "passive": false
+        },
+        "slot6": {
+            "name": "empty"
+        },
+        "slot7": {
+            "name": "empty"
+        },
+        "slot8": {
+            "name": "empty"
+        },
+        "stash0": {
+            "name": "empty"
+        },
+        "stash1": {
+            "name": "empty"
+        },
+        "stash2": {
+            "name": "empty"
+        },
+        "stash3": {
+            "name": "empty"
+        },
+        "stash4": {
+            "name": "empty"
+        },
+        "stash5": {
+            "name": "empty"
+        },
+        "teleport0": {
+            "name": "item_tpscroll",
+            "purchaser": 0,
+            "can_cast": true,
+            "cooldown": 0,
+            "passive": false,
+            "charges": 1
+        },
+        "neutral0": {
+            "name": "empty"
+        }
+    },
+    "draft": {},
+    "wearables": {
+        "wearable0": 609,
+        "wearable1": 9050,
+        "style1": 0,
+        "wearable2": 25352,
+        "wearable3": 25354,
+        "wearable4": 7726,
+        "wearable5": 790,
+        "wearable6": 793,
+        "wearable7": 23237,
+        "wearable8": 14912
+    },
+    "previously": {
+        "map": {
+            "game_time": 719,
+            "clock_time": 595
+        },
+        "player": {
+            "gold": 1227,
+            "gold_reliable": 823,
+            "gold_from_income": 895,
+            "gpm": 2169
+        },
+        "hero": {
+            "health": 622
+        }
+    },
+    "auth": {
+        "token": "hello1234"
+    }
+}
