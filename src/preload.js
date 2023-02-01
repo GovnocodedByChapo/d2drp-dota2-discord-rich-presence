@@ -35,25 +35,61 @@ const VERSION = 0;
 server.events.on('newclient', (client) => { 
     clients.push(client) 
     console.log(client) 
-    appendLog('newclient')
+    appendLog('Client connected!')
 });
-setInterval(() => {
-    clients.forEach(function(client, index) {
-        appendLog(client)
-        rpc.setActivity(activityHandler(client?.gamestate, 1))
-        lastUpdateTime = Date.now()
-        appendLog('Info updated!')
+setInterval(async () => {
+    clients.forEach(async (client, index) => {
+        const activity = await activityHandler(client?.gamestate, 1);
+        if (activity) {
+            activity.buttons = getButtons();
+            rpc.setActivity(activity);
+            lastUpdateTime = Date.now();
+            appendLog('Info updated!');
+        } else {
+            rpc.clearActivity();
+            appendLog('Info cleared (main menu)!');
+        }
     });
     if (lastUpdateTime + (loopDelay * 2) - Date.now() <= 0) {
-        rpc.clearActivity()
+        rpc.clearActivity();
         //console.log('activity cleared!')
-        appendLog('Waiting for Dota 2...')
+        appendLog('Waiting for Dota 2...');
     }
 }, loopDelay)
 
+const urlRegex = require('url-regex');
+const isUrlValid = (url) => urlRegex().test(url)//url.match(/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/) != null
 
+const getButtons = () => {
+    const buttons = [
+        {label: document.getElementById('button1label').value, url: document.getElementById('button1url').value},
+        {label: document.getElementById('button2label').value, url: document.getElementById('button2url').value}
+    ].filter(v => v.label.length > 1 && isUrlValid(v.url))
+    return (document.getElementById('showButtons').checked && buttons.length > 0) ? buttons : undefined;
+}
 
+const path = require('path');
+const { openJson } = require('reactive-json-file')
+let settings = openJson(path.join(__dirname, 'd2drpc_buttons_config.json'), {default: {
+    showButtons: false,
+    buttons: [
+        {label: 'Open Google', url: 'https://google.com'},
+        {label: 'Open GitHub', url: 'https://github.com'},
+    ]
+}})
 
 window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('_version').textContent += updateSystem.VERSION;
+    document.getElementById('showButtons').checked = settings.showButtons;
+    document.getElementById('button1label').value = settings.buttons[0].label;
+    document.getElementById('button2label').value = settings.buttons[1].label;
+    document.getElementById('button1url').value = settings.buttons[0].url;
+    document.getElementById('button2url').value = settings.buttons[1].url;
+    document.getElementById('saveButtons').addEventListener('click', () => {
+        settings.showButtons = document.getElementById('showButtons').checked;
+        settings.buttons[0].label = document.getElementById('button1label').value;
+        settings.buttons[1].label = document.getElementById('button2label').value;
+        settings.buttons[0].url = document.getElementById('button1url').value;
+        settings.buttons[1].url = document.getElementById('button2url').value;
+    })
 })

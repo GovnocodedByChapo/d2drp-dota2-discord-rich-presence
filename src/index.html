@@ -16,27 +16,35 @@
         by chapo (a.k.a moujeek)
         <div class="links">
             <div class="linkurl">
-                <button onclick="window.location = 'https://www.blast.hk/members/112329/'">
+                <button class="mylink" onclick="window.location = 'https://www.blast.hk/members/112329/'">
                     <img class="imageUrlButton" src="https://www.blast.hk/styles/io_dark/images/blasthack/logo_b_new.png">
                 </button>
             </div>
             <div class="linkurl">
-                <button onclick="window.location = 'https://github.com/GovnocodedByChapo'">
+                <button class="mylink" onclick="window.location = 'https://github.com/GovnocodedByChapo'">
                     <img class="imageUrlButton rounded" src=" https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
                 </button>
             </div>
             <div class="linkurl">
-                <button onclick="window.location = 'https://vk.com/ya_chapo'">
+                <button class="mylink" onclick="window.location = 'https://vk.com/ya_chapo'">
                     <img class="imageUrlButton" src="https://cdn.discordapp.com/attachments/854686750168186880/1070352453226221628/VK_Compact_Logo_2021-present.svg.png">
                 </button>
             </div>
             <div class="linkurl">
-                <button onclick="window.location = 'https://t.me/ya_chapo'">
+                <button class="mylink" onclick="window.location = 'https://t.me/ya_chapo'">
                     <img class="imageUrlButton" src="https://cdn.discordapp.com/attachments/854686750168186880/1070354177932406947/Telegram_logo.svg.webp">
                 </button>
-            </div>
-            
+            </div>            
         </div> 
+        <input type="checkbox" id="showButtons"> Show buttons
+        <div class="customButtons">
+            <input id="button1label" placeholder="First button text">:<input id="button1url" placeholder="First button URL" type="url" pattern="https?://.*">
+            <br>
+            <br>
+            <input id="button2label" placeholder="Second button text">:<input id="button2url" placeholder="Second button URL"  type="url" pattern="https?://.*">
+            <br>
+            <button class="asd" id="saveButtons">Save buttons</button>
+        </div>
     </div>
     
     <textarea class="rpcLog" readonly id="rpcLog">Waiting for Dota 2...</textarea>
