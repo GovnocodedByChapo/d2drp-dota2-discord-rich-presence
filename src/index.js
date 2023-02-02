@@ -9,7 +9,7 @@ let appIcon = null
 const createWindow = () => {
     const mainWindow = new BrowserWindow({
         width: 500,
-        height: 450,
+        height: 470,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
@@ -24,10 +24,10 @@ const createWindow = () => {
     })
     //new Notification({ title: 'D2DRP - Dota2 Discord Rich Presence (by chapo)', message: 'Ready, wait for dota 2.' }).show()
     dialog.showMessageBox(mainWindow, {title: 'D2DRP - Dota2 Discord Rich Presence (by chapo)', message: 'Ready, waiting for dota 2.\n\n(app will hide in tray)'});
-    //mainWindow.minimize()
+    mainWindow.minimize()
     mainWindow.setMenu(null)
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
     app.whenReady().then(() => {
         let iconPath = path.join(__dirname, 'icon.png');
         appIcon = new Tray(iconPath)
@@ -36,7 +36,6 @@ const createWindow = () => {
         })
     })
     checkVersion()
-   
 };
 
 const checkVersion = async() => {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="index.css" />
     <script src="./preload.js"></script>
-    <title>Dota2-DRPC by chapo</title>
+    <title>D2DRP - Dota2 Discord Rich Presence by chapo</title>
 </head>
 
 <body>
@@ -36,19 +36,31 @@
                 </button>
             </div>            
         </div> 
-        <input type="checkbox" id="showButtons"> Show buttons
-        <div class="customButtons">
+        <!-- <input type="checkbox" id="showButtons"> Show buttons -->
+        
+        <div class="links">
+            <h4>SHOW BUTTONS</h4>
+            <label class="switch" style="margin-left: 10px">
+                <input type="checkbox" id="showButtons">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        <div id="customButtons">
             <input id="button1label" placeholder="First button text">:<input id="button1url" placeholder="First button URL" type="url" pattern="https?://.*">
             <br>
             <br>
             <input id="button2label" placeholder="Second button text">:<input id="button2url" placeholder="Second button URL"  type="url" pattern="https?://.*">
             <br>
-            <button class="asd" id="saveButtons">Save buttons</button>
+            <button class="saveButtons" id="saveButtons">SAVE BUTTONS</button>
         </div>
     </div>
     
-    <textarea class="rpcLog" readonly id="rpcLog">Waiting for Dota 2...</textarea>
-    <br>
+    <!-- <textarea class="rpcLog" readonly id="rpcLog">Waiting for Dota 2...</textarea> -->
+    <div id="statusChild" class="links">
+        <h4>Status: </h4>
+        <a id="status" style="margin-left: 5px">Waiting for Dota 2...</a>
+    </div>
     <a id="_version">version: </a>
 
 </body>
